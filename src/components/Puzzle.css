@@ -1,4 +1,3 @@
-
 .puzzle-root {
   display: flex;
   flex-direction: column;
@@ -6,9 +5,19 @@
   gap: 1rem;
 }
 
+/* Layout wrapper for board + console */
+.board-console-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem; /* spacing between board and console */
+}
+
+/* Larger puzzle board */
 .board {
-  width: 320px;
-  height: 320px;
+  width: 400px;
+  height: 400px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -16,7 +25,7 @@
   background: #444;
   padding: 6px;
   border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
   touch-action: none;
 }
 
@@ -31,7 +40,7 @@
   background: #2f2f2f;
   color: #fff;
   font-weight: 700;
-  font-size: 1.6rem;
+  font-size: 2rem; /* scaled up for bigger board */
   border-radius: 8px;
   user-select: none;
   touch-action: manipulation;
@@ -42,19 +51,20 @@
 }
 
 .controls {
-  display:flex;
+  display: flex;
   gap: 0.5rem;
-  align-items:center;
+  align-items: center;
 }
 
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
 }
+
 .modal {
   background: white;
   color: black;
@@ -66,4 +76,53 @@
 
 .info {
   color: #ddd;
+}
+
+/* =========================
+   Console window (right side)
+   ========================= */
+.console-window {
+  background-color: #111;
+  color: #0f0;
+  font-family: monospace;
+  padding: 8px;
+  border-radius: 8px;
+  height: 400px;            /* match board height */
+  overflow-y: auto;
+  box-shadow: inset 0 0 8px #0f0;
+  text-align: left;
+  width: 280px;             /* proportional width */
+}
+
+.console-line {
+  line-height: 1.3;
+  font-size: 0.85rem;
+  white-space: pre-wrap;
+}
+
+.manual-config {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  width: 100%;
+}
+
+.manual-config input {
+  flex: 1;
+  padding: 15px;
+  font-size: 1rem;
+  border: 1px solid #3e3e3e;
+  border-radius: 4px;
+  background-color: rgb(43, 43, 43);
+  color: rgb(177, 177, 177);
+}
+
+.manual-config button {
+  padding: 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
 }

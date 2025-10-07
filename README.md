@@ -1,6 +1,6 @@
 # A*-based 8-Puzzle Solver
 
-The AI-gen free A* Algorith itself is located in /backend/a_star.py or via this link: https://github.com/AsgharKazmi2005/8-puzzle-solver/blob/main/backend/a_star.py
+The AI-gen free A* Algorithm is located in /backend/a_star.py or via this link: https://github.com/AsgharKazmi2005/8-puzzle-solver/blob/main/backend/a_star.py
 
 To get it to work on your system locally, clone this repository. Once cloned, run the app.py file in the backend folder
 to create the endpoint to which the A* algorithm will respond with the solution.

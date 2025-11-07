@@ -11,6 +11,12 @@ to create the endpoint to which the A* algorithm will respond with the solution.
 python backend/app.py
 ```
 
+Then in a seperate terminal, download node modules:
+
+```
+npm i
+```
+
 Then run the frontend with 
 
 ```
@@ -18,4 +24,6 @@ npm run dev
 ```
 
 Now you should be able to both play the game as a user or click the A* Solve button to see A* solve the puzzle.
+
+If for any reason you are not able to run the project, please email me and Denis.
 
